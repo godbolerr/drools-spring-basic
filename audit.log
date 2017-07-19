@@ -1,0 +1,59 @@
+<object-stream>
+<org.drools.core.audit.WorkingMemoryLog>
+  <version>6.1</version>
+  <events>
+    <org.drools.core.audit.event.ObjectLogEvent>
+      <type>1</type>
+      <factId>1</factId>
+      <objectToString>Driver [name=Mr Joe Blogs, age=30, priorClaims=0, locationRiskProfile=HIGH]</objectToString>
+    </org.drools.core.audit.event.ObjectLogEvent>
+    <org.drools.core.audit.event.ObjectLogEvent>
+      <type>1</type>
+      <factId>2</factId>
+      <objectToString>Policy [type=COMPREHENSIVE, approved=false, discountPercent=0, basePrice=0]</objectToString>
+    </org.drools.core.audit.event.ObjectLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Pricing bracket_18 [1, 2]</activationId>
+      <rule>Pricing bracket_18</rule>
+      <declarations>policy=Policy [type=COMPREHENSIVE, approved=false, discountPercent=0, basePrice=0]</declarations>
+      <factHandleIds>2,1</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Pricing bracket_18 [1, 2]</activationId>
+      <rule>Pricing bracket_18</rule>
+      <declarations>policy=Policy [type=COMPREHENSIVE, approved=false, discountPercent=0, basePrice=0]</declarations>
+      <factHandleIds>2,1</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Pricing bracket_18 [1, 2]</activationId>
+      <rule>Pricing bracket_18</rule>
+      <declarations>policy=Policy [type=COMPREHENSIVE, approved=false, discountPercent=0, basePrice=120]</declarations>
+      <factHandleIds>2,1</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Discounts_34 [1, 2]</activationId>
+      <rule>Discounts_34</rule>
+      <declarations>policy=Policy [type=COMPREHENSIVE, approved=false, discountPercent=0, basePrice=120]</declarations>
+      <factHandleIds>2,1</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Discounts_34 [1, 2]</activationId>
+      <rule>Discounts_34</rule>
+      <declarations>policy=Policy [type=COMPREHENSIVE, approved=false, discountPercent=0, basePrice=120]</declarations>
+      <factHandleIds>2,1</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Discounts_34 [1, 2]</activationId>
+      <rule>Discounts_34</rule>
+      <declarations>policy=Policy [type=COMPREHENSIVE, approved=false, discountPercent=20, basePrice=120]</declarations>
+      <factHandleIds>2,1</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+  </events>
+</org.drools.core.audit.WorkingMemoryLog>
+</object-stream>
