@@ -1,27 +1,28 @@
 drools
 ======
 
-Spring boot drools demo app
+Spring boot drools demo app using version 7.0.0.Final
 
 ## How to run
 
 ```
 mvn spring-boot:run 
 ```
+POST Request :
 
-## Using
+http://localhost:8080/policy/check
 
-Try the drools offer check using the following URL:
-
-Go to the Swagger API page: [http://localhost:8080/sdoc.jsp#!/fraud/checkOrder](http://localhost:8080/sdoc.jsp#!/fraud/checkOrder)
-
-Paste the following offer:
-
-```json
 {
-    "offerId": "1",
-    "seller": {
-        "rating": "3"
-     }
+    "driver": {
+        "name": "Mr XXX",
+        "age": 30,
+        "priorClaims": 0,
+        "locationRiskProfile": "HIGH"
+    },
+    "policy": {
+        "type": "COMPREHENSIVE",
+        "approved": false,
+        "discountPercent": 0,
+        "basePrice": 0
+    }
 }
-```
