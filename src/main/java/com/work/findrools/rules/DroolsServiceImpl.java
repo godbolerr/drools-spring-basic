@@ -80,4 +80,10 @@ public class DroolsServiceImpl implements DroolsService {
 		return "Executed Successfully " + policy + " for drive " + driver;
 	}
 
+	@Override
+	public FinPerson calculateBenefits(FinPerson person) {
+		// TODO Auto-generated method stub
+		return person;
+	}
+
 }

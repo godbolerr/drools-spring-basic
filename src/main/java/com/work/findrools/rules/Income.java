@@ -27,6 +27,20 @@ public class Income {
 	 * 
 	 */
 	String details;
+	
+	
+
+	/**
+	 * @param amount
+	 * @param type
+	 * @param details
+	 */
+	public Income(BigDecimal amount, String type, String details) {
+		super();
+		this.amount = amount;
+		this.type = type;
+		this.details = details;
+	}
 
 	/**
 	 * @return the amount

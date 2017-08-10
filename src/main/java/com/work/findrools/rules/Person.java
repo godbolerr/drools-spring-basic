@@ -6,6 +6,10 @@ package com.work.findrools.rules;
 import java.io.Serializable;
 import java.util.Date;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 /**
  * @author 115750
  *
@@ -15,11 +19,17 @@ public class Person implements Serializable {
 	/**
 	 * Uniuqe identifier for a person.
 	 */
-	String id;
+	String id = "";
+	
+	
+	String name;
 	
 	/**
 	 * Date of birth for a person
 	 */
+
+	@JsonFormat(pattern="yyyy-MM-dd")
+	@DateTimeFormat(iso = DateTimeFormat.ISO.TIME)
 	Date dateOfBirth;
 	
 	
@@ -68,6 +78,26 @@ public class Person implements Serializable {
 	 * True if this person has any diseases.
 	 */
 	boolean hasDisease;
+	
+	
+	public Person(){}
+
+	/**
+	 * @param dateOfBirth
+	 * @param gender
+	 * @param relationShipCode
+	 * @param disabilityPercent
+	 * @param disease
+	 */
+	public Person(String name, Date dateOfBirth, String gender, String relationShipCode, int disabilityPercent, String disease) {
+		super();
+		this.name = name;
+		this.dateOfBirth = dateOfBirth;
+		this.gender = gender;
+		this.relationShipCode = relationShipCode;
+		this.disabilityPercent = disabilityPercent;
+		this.disease = disease;
+	}
 
 	/**
 	 * @return the id
@@ -101,7 +131,13 @@ public class Person implements Serializable {
 	 * @return the age
 	 */
 	public int getAge() {
-		return age;
+		
+//		if ( age == 0 && dateOfBirth != null ){
+//			Date startDate = Date.of(2017, Month.AUGUST, 01);
+//			long numberOfYears = ChronoUnit.YEARS.between(dateOfBirth,startDate);
+//			age = new Long(numberOfYears).intValue();
+//		}
+		return age ;
 	}
 
 	/**
@@ -193,6 +229,20 @@ public class Person implements Serializable {
 	 */
 	public void setHasDisease(boolean hasDisease) {
 		this.hasDisease = hasDisease;
+	}
+
+	/**
+	 * @return the name
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * @param name the name to set
+	 */
+	public void setName(String name) {
+		this.name = name;
 	}
 	
 	

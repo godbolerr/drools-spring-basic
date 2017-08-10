@@ -28,6 +28,21 @@ public class Donation {
 	 */
 	
 	String details;
+	
+	
+	
+
+	/**
+	 * @param amount
+	 * @param type
+	 * @param details
+	 */
+	public Donation(BigDecimal amount, String type, String details) {
+		super();
+		this.amount = amount;
+		this.type = type;
+		this.details = details;
+	}
 
 	/**
 	 * @return the amount

@@ -27,6 +27,32 @@ public class Address {
 	 * OFFICE,HOME
 	 */
 	String addressType;
+	
+	
+	
+
+	/**
+	 * @param addressLine1
+	 * @param addressLine2
+	 * @param city
+	 * @param state
+	 * @param country
+	 * @param pinCode
+	 * @param landMark
+	 * @param addressType
+	 */
+	public Address(String addressLine1, String addressLine2, String city, String state, String country, String pinCode,
+			String landMark, String addressType) {
+		super();
+		this.addressLine1 = addressLine1;
+		this.addressLine2 = addressLine2;
+		this.city = city;
+		this.state = state;
+		this.country = country;
+		this.pinCode = pinCode;
+		this.landMark = landMark;
+		this.addressType = addressType;
+	}
 
 	/**
 	 * @return the addressLine1

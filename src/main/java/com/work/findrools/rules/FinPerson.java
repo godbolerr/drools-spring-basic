@@ -5,6 +5,7 @@ package com.work.findrools.rules;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -29,7 +30,7 @@ public class FinPerson extends Person {
 
 	Address address;
 
-	List<Person> children;
+	List<Person> family;
 
 	List<Person> dependent;
 
@@ -58,6 +59,24 @@ public class FinPerson extends Person {
 	List<Donation> donations;
 
 	List<Income> otherIncomes;
+
+	public FinPerson() {
+	}
+
+	
+	
+	/**
+	 * @param dateOfBirth
+	 * @param gender
+	 * @param relationShipCode
+	 * @param disabilityPercent
+	 * @param disease
+	 */
+	public FinPerson(String name,Date dateOfBirth, String gender, String relationShipCode, int disabilityPercent, String disease) {
+		super(name,dateOfBirth, gender, relationShipCode, disabilityPercent, disease);
+	}
+
+
 
 	/**
 	 * @return the email
@@ -162,21 +181,6 @@ public class FinPerson extends Person {
 	 */
 	public void setAddress(Address address) {
 		this.address = address;
-	}
-
-	/**
-	 * @return the children
-	 */
-	public List<Person> getChildren() {
-		return children;
-	}
-
-	/**
-	 * @param children
-	 *            the children to set
-	 */
-	public void setChildren(List<Person> children) {
-		this.children = children;
 	}
 
 	/**
@@ -391,4 +395,41 @@ public class FinPerson extends Person {
 		this.otherIncomes.add(income);
 	}
 
+	
+	public void addDependent(Person p ){
+		
+		if ( dependent == null ) {
+			dependent = new ArrayList<Person>();
+		}
+		dependent.add(p);
+	}
+	
+	public void addChildren(Person p ){
+		
+		if ( family == null ) {
+			family = new ArrayList<Person>();
+		}
+		family.add(p);
+	}
+
+
+
+	/**
+	 * @return the family
+	 */
+	public List<Person> getFamily() {
+		return family;
+	}
+
+
+
+	/**
+	 * @param family the family to set
+	 */
+	public void setFamily(List<Person> family) {
+		this.family = family;
+	}
+	
+	
+	
 }
